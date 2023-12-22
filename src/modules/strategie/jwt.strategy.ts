@@ -11,7 +11,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   constructor(@Inject(config.KEY) configService: ConfigType<typeof config>) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      ignoreExpiration: false,
+      ignoreExpiration: false, // se coloca un ejemplo de un strategy de nest por si se queiere validar un jwt
       secretOrKey: configService.jwtSecret,
     });
   }

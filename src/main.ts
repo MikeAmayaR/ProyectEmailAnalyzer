@@ -12,10 +12,10 @@ async function bootstrap() {
     }),
   );
   const config = new DocumentBuilder()
-    .setTitle('API USERS')
-    .setDescription('PARKIT USER')
+    .setTitle('API MAIL')
+    .setDescription('MAIL USER')
     .setVersion('1.0')
-    .build();
+    .build(); //se configura el swagger o documentación
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
 
