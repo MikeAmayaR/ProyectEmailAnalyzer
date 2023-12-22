@@ -44,7 +44,36 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+## How to Obtain the JSON content from an Email file
+```
+STEP 1:
+Run the application in development mode with the command:
 
+$ npm run start:dev
+STEP 2:
+Ensure you have a downloaded email file with a JSON attachment.
+
+STEP 3:
+To retrieve the JSON content, you can choose from two methods:
+
+Method 1: Using a POST Request
+Send a POST request to the following endpoint, including the file path in the request body:
+
+POST http://localhost:5000/mail-url-client/analyzer-by-path
+
+Example Payload:
+
+json
+Copiar código
+
+{
+    "urlMail": "C:\\Users\\Downloads\\Mail url.eml"
+}
+Method 2: Direct File Upload (Recommended)
+Upload the file directly using the form-data in a POST request, which is the most secure approach.
+
+POST 'http://localhost:5000/mail-url-client/analyzer'
+```
 ## Test
 
 ```bash
