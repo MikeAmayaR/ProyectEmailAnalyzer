@@ -46,6 +46,10 @@ $ npm run start:prod
 ```
 ## How to Obtain the JSON content from an Email file
 ```
+
+SWAGGER:
+http://localhost:5000/docs#/
+
 STEP 1:
 Run the application in development mode with the command:
 
